@@ -7,54 +7,47 @@
 <title>Ground'd Arts</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;600;700&family=Ultra&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;600;700&family=VT323&display=swap" rel="stylesheet">
 <style>
-body{margin:0}
-.gd{--red:#DA261B;--pink:#F83599;--white:#FFFFFF;--ink:#2A0E0B;
- font-family:"Instrument Sans","Helvetica Neue",Arial,sans-serif;font-size:1.125rem;line-height:1.6;color:var(--ink);background:var(--white);-webkit-font-smoothing:antialiased}
+body{margin:0;background:#fff}
+.gd{--red:#DA261B;--pink:#F83599;--white:#FFFFFF;--ink:#2A0E0B;max-width:1200px;margin:0 auto;padding:24px clamp(24px,6vw,80px) 32px;
+ font-family:"Inconsolata",monospace;font-size:17px;line-height:1.3;color:var(--ink);background:var(--white);-webkit-font-smoothing:antialiased}
 .gd *,.gd *::before,.gd *::after{box-sizing:border-box}
-.gd h2,.gd h3{font-family:"Ultra",Georgia,serif;font-weight:400;letter-spacing:.01em}
+.gd h2,.gd h3{font-family:"VT323",monospace;font-weight:400}
 .gd a{color:inherit}
 .gd a:focus-visible,.gd button:focus-visible{outline:3px solid var(--ink);outline-offset:3px}
-.gd-wrap{max-width:70rem;margin:0 auto;padding:0 1.5rem}
+.gd-wrap{padding:24px}
 .gd svg{display:block}
-
-.gd-hero{background:var(--pink);color:var(--white);padding:3rem 0 3.5rem}
-.gd-hero-top{display:flex;margin-bottom:.5rem;align-items:flex-end;gap:clamp(1rem,3vw,2.5rem)}
-.gd-mark{width:clamp(4.5rem,13vw,9.5rem);flex:none;fill:var(--white)}
-.gd-word{width:100%;fill:var(--white)}
-.gd-lede{font-size:clamp(1.25rem,2.6vw,1.6rem);font-weight:600;line-height:1.35;max-width:32ch;margin:2.5rem 0 2rem}
-.gd-actions{display:flex;flex-wrap:wrap;gap:.9rem}
-.gd-btn{display:inline-block;font-weight:700;font-size:1.05rem;text-decoration:none;padding:.85rem 1.5rem;border-radius:999px;border:3px solid currentColor;transition:transform .12s}
-.gd-btn:hover{transform:translateY(-2px)}
-.gd-btn-solid{background:var(--white);color:var(--red)!important;border-color:var(--white)}
-.gd-btn-line{color:var(--white)!important}
-.gd-btn-red{background:var(--red);color:var(--white)!important;border-color:var(--red)}
-.gd-btn-pink{background:var(--pink);color:var(--white)!important;border-color:var(--pink)}
-
-.gd-band{background:var(--red);color:var(--white);padding:2.25rem 0 1.5rem;overflow:hidden}
-.gd-boots{display:grid;grid-template-columns:repeat(var(--cols,12),1fr);gap:clamp(.5rem,1.6vw,1.25rem);max-width:70rem;margin:0 auto;padding:0 1.5rem}
+.gd-hero,.gd-panel,.gd-foot{border:1px solid var(--ink)}
+.gd-module-bar{display:flex;justify-content:space-between;gap:16px;padding:10px 14px;border-bottom:1px solid var(--ink);background:var(--white);color:var(--ink);font-size:12px;line-height:1.3;letter-spacing:.04em}
+.gd-module-bar span:last-child{text-align:right}
+.gd-hero{background:var(--pink)}
+.gd-hero-top{display:flex;align-items:flex-end;gap:clamp(1rem,3vw,2.5rem)}
+.gd-mark{width:clamp(4.5rem,10vw,8rem);flex:none;fill:var(--white)}
+.gd-word{width:min(100%,45rem);fill:var(--white)}
+.gd-lede{font-size:clamp(1.1rem,2vw,1.35rem);font-weight:600;line-height:1.35;max-width:42ch;margin:24px 0}
+.gd-actions{display:flex;flex-wrap:wrap;gap:12px}
+.gd-btn{display:inline-block;font-weight:700;font-size:1rem;text-decoration:none;padding:10px 16px;border:1px solid var(--ink);background:var(--white);color:var(--ink)}
+.gd-btn:hover{background:var(--ink);color:var(--white)}
+.gd-main{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));align-items:start;gap:12px;margin-top:12px}
+.gd-band,.gd-join{grid-column:1/-1}
+.gd-band{background:var(--red);color:var(--white);overflow:hidden}
+.gd-boots{display:grid;grid-template-columns:repeat(var(--cols,12),1fr);gap:clamp(.5rem,1.6vw,1.25rem);padding:24px 24px 0}
 .gd-boots button{all:unset;cursor:pointer;aspect-ratio:79/100;transform-origin:50% 95%;transition:transform .35s cubic-bezier(.3,1.6,.5,1)}
+.gd-boots button:focus-visible{outline:3px solid var(--white);outline-offset:3px}
 .gd-boots svg{width:100%;height:100%}
-.gd-band p{text-align:center;font-size:.95rem;margin:1.25rem auto 0;max-width:none;padding:0 1.5rem;opacity:.9}
-
-.gd-meet{padding:5rem 0 4.5rem}
-.gd h2{font-size:clamp(2rem,4.6vw,3.3rem);line-height:1.05;margin:0 0 1.1rem;color:var(--red)}
-.gd p{margin:0 0 1rem;max-width:60ch}
-
-.gd-build{background:var(--red);color:var(--white);padding:5rem 0}
-.gd-build h2{color:var(--white)}
-.gd-list{list-style:none;margin:2.25rem 0 0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:2rem}
-.gd-list li{border-top:4px solid var(--pink);padding-top:1rem}
-.gd h3{font-size:1.4rem;line-height:1.15;margin:0 0 .5rem}
-.gd-build p{font-size:1.05rem}
-
-.gd-join{padding:5rem 0}
-.gd-foot{background:var(--pink);color:var(--white);padding:2rem 0;font-size:.95rem;font-weight:600}
-.gd-foot .gd-wrap{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:1rem}
-.gd-foot svg{width:9rem;fill:var(--white)}
-
-@media (max-width:760px){.gd-list{grid-template-columns:1fr}.gd-hero{padding-top:2rem}}
+.gd-band p{margin:16px 24px 20px;font-size:15px}
+.gd h2{font-size:clamp(36px,4vw,44px);line-height:1.1;margin:0 0 12px;color:var(--red)}
+.gd h3{font-size:29px;line-height:1.15;margin:0 0 6px}
+.gd p{max-width:65ch}
+.gd-list{list-style:none;margin:20px 0 0;padding:0}
+.gd-list li{border-top:1px solid var(--ink);padding:14px 0}
+.gd-list li p{margin:0}
+.gd-join{background:var(--pink)}
+.gd-foot{margin-top:12px;font-size:14px}
+.gd-foot .gd-wrap{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:16px}
+.gd-foot svg{width:9rem;fill:var(--red)}
+@media (max-width:760px){.gd-main{grid-template-columns:minmax(0,1fr)}.gd-band,.gd-join{grid-column:auto}.gd-wrap{padding:18px}}
 @media (prefers-reduced-motion:reduce){.gd-boots button,.gd-btn{transition:none}}
 </style>
 </head>
@@ -67,6 +60,7 @@ body{margin:0}
  </svg>
 
  <header class="gd-hero">
+  <div class="gd-module-bar"><span>00 / GROUND'D</span><span>CREATIVE COMMUNITY / TEXAS</span></div>
   <div class="gd-wrap">
    <h1 style="margin:0">
     <span class="gd-hero-top">
@@ -81,12 +75,15 @@ body{margin:0}
   </div>
  </header>
 
- <section class="gd-band" aria-label="Interactive boot pattern">
+ <main class="gd-main">
+ <section class="gd-band gd-panel" aria-label="Interactive boot pattern">
+  <div class="gd-module-bar"><span>01 / PLAY</span><span>RESTYLE THE BOOTS</span></div>
   <div class="gd-boots" id="gd-boots"></div>
   <p>Tap a boot to restyle it. Every norm should be challenged.</p>
  </section>
 
- <section class="gd-meet" aria-labelledby="gd-meet-h">
+ <section class="gd-meet gd-panel" aria-labelledby="gd-meet-h">
+  <div class="gd-module-bar"><span>02 / COMMUNITY</span><span>MEET GROUND'D</span></div>
   <div class="gd-wrap">
     <h2 id="gd-meet-h">Come meet the community</h2>
     <p>Ground'd starts with people in a room. We bring together people making or supporting art in North Texas: painters, designers, musicians, creative technologists, students, organizers and the curious.</p>
@@ -94,7 +91,8 @@ body{margin:0}
   </div>
  </section>
 
- <section class="gd-build" aria-labelledby="gd-build-h">
+ <section class="gd-build gd-panel" aria-labelledby="gd-build-h">
+  <div class="gd-module-bar"><span>03 / THE WORK</span><span>WHAT WE'RE BUILDING</span></div>
   <div class="gd-wrap">
    <h2 id="gd-build-h">What we're building</h2>
    <p>Ground'd connects Texas artists and cultural organizations with each other and with the resources they need to keep making work here.</p>
@@ -106,7 +104,8 @@ body{margin:0}
   </div>
  </section>
 
- <section class="gd-join" aria-labelledby="gd-join-h">
+ <section class="gd-join gd-panel" aria-labelledby="gd-join-h">
+  <div class="gd-module-bar"><span>04 / CONNECT</span><span>FOLLOW ALONG</span></div>
   <div class="gd-wrap">
    <h2 id="gd-join-h">Follow along</h2>
    <p>We're just getting started. Follow on Instagram for meetup dates, artist features and ways to get involved.</p>
@@ -115,6 +114,7 @@ body{margin:0}
    </div>
   </div>
  </section>
+ </main>
 
  <footer class="gd-foot">
   <div class="gd-wrap">
