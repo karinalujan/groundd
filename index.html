@@ -43,6 +43,7 @@ body{margin:0}
 .gd-list li p{margin:0}
 .gd-foot{margin-top:12px;font-size:14px}
 .gd-foot .gd-wrap{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:16px}
+.gd-foot nav{display:flex;flex-wrap:wrap;gap:16px}
 .gd-foot svg{width:9rem;fill:var(--accent)}
 @media (max-width:760px){.gd-main{grid-template-columns:minmax(0,1fr)}.gd-band,.gd-join{grid-column:auto}.gd-wrap{padding:18px}}
 @media (prefers-reduced-motion:reduce){.gd-boots button,.gd-btn{transition:none}}
@@ -116,7 +117,10 @@ body{margin:0}
  <footer class="gd-foot">
   <div class="gd-wrap">
    <svg viewBox="0 0 739.1 100" role="img" aria-label="Ground'd"><use href="#gd-wordmark"/></svg>
-   <span>Ground'd Arts, North Texas. Also known as Groundd and Grounded Arts.</span>
+   <nav aria-label="Related links">
+    <a href="https://signalntx.com">signalntx.com</a>
+    <a href="https://lujan.design">lujan.design</a>
+   </nav>
   </div>
  </footer>
 </div>
